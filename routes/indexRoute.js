@@ -5,7 +5,8 @@ const { ensureAuthenticated, isAdmin } = require("../middleware/checkAuth"); // 
 
 // Welcome route -> localhost:8000 redirects to login page
 router.get("/", (req, res) => {
-  res.send("welcome");
+  // res.send("welcome");
+  res.redirect("/auth/login")
 });
 
 // Dashboard -> localhost:8000/dashboard 

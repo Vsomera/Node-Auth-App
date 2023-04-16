@@ -7,7 +7,7 @@ const router = express.Router();
 // Displays login page
 router.get(
   "/login", 
-  forwardAuthenticated, 
+  forwardAuthenticated, // if user is already logged in, redirects to user dashboard
   (req, res) => res.render("login")); // renders the login.ejs page to browser on call
 
 // Authenticates user details when button is clicked
